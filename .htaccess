@@ -1,0 +1,10 @@
+# 保护敏感文件（Apache 2.4+）
+<Files "config.php">
+    Require all denied
+</Files>
+<FilesMatch "\.(sql|md|log)$">
+    Require all denied
+</FilesMatch>
+
+# 默认字符集
+AddDefaultCharset UTF-8
